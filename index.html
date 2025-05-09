@@ -14,29 +14,10 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            min-height: 100vh;
-            background: linear-gradient(120deg, #4e54c8, #8f94fb, #a6c0fe, #fbc2eb);
-            background-size: 400% 400%;
-            animation: bgMove 20s ease infinite;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            background-color: tan;
             padding: 20px;
         }
 
-        @keyframes bgMove {
-            0% {
-                background-position: 0% 50%;
-            }
-
-            50% {
-                background-position: 100% 50%;
-            }
-
-            100% {
-                background-position: 0% 50%;
-            }
-        }
 
         .search-container {
             display: flex;
@@ -186,18 +167,6 @@
 
             { name: "Atomic Habits", category: "non-fiction", price: "₹599", img: "image/p-10.jpg" },
 
-
-            // { name: "Atomic Habits", category: "non-fiction", price: "₹599", img: "https://m.media-amazon.com/images/I/91bYsX41DVL.jpg" },
-
-            // { name: "Atomic Habits", category: "non-fiction", price: "₹599", img: "https://m.media-amazon.com/images/I/91bYsX41DVL.jpg" },
-
-
-
-            // { name: "Walk into the Shadow", category: "mystery", price: "₹799", img: "image/p-1.jpeg" },
-            // { name: "Hide and Seek", category: "mystery", price: "₹599", img: "image/p-2.jpeg" },
-            // { name: "The Little Mermaid", category: "fiction", price: "₹399", img: "image/p-3.jpeg" },
-            // { name: "Beauty and the Beast", category: "fiction", price: "₹499", img: "image/p-5.jpeg" },
-
         ];
 
         // Display all books initially
@@ -205,7 +174,7 @@
             displayBooks(books);
         }
 
-        // Function to display books
+        // display a book method
         function displayBooks(booksToShow) {
             const bookList = document.getElementById("book-list");
             bookList.innerHTML = "";
@@ -220,7 +189,7 @@
             });
         }
 
-        // Function to filter books by category
+        // Function 
         function filterBooks(category) {
             let filteredBooks;
             if (category === 'all') {
@@ -231,7 +200,7 @@
             displayBooks(filteredBooks);
         }
 
-        // Search functionality
+        // Search
         document.getElementById('search-btn').addEventListener('click', function () {
             const searchTerm = document.getElementById('search-input').value.toLowerCase();
             const filteredBooks = books.filter(book => book.name.toLowerCase().includes(searchTerm));
